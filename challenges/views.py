@@ -16,7 +16,7 @@ monthly_challenges = {
     "september": "Work on networking",
     "october": "Complete pending tution classes",
     "november": "Complete pending course",
-    "december": "Become the best",
+    "december": None,
 }
 
 # Create your views here.
