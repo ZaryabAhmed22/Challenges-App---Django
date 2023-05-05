@@ -23,19 +23,8 @@ monthly_challenges = {
 
 
 def home(request):
-    months = ""
-    required_month = None
-
-    for key in monthly_challenges.keys():
-        required_month = key
-        month_path = reverse("month-challenge", args=[required_month])
-        months += f"<a href={month_path}><h1><li>{key.capitalize()}</li></h1>"
-
-    response_data = f"""
-    <ul>{months}</ul>
-    """
-
-    return HttpResponse(response_data)
+    months = monthly_challenges.keys()
+    return render(request, "challenges/index.html", {"months": months})
 
 
 def monthly_challenge_by_number(request, month):
